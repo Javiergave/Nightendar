@@ -9,41 +9,4 @@
     android:textAlignment="center"
     android:background="@color/fondo_negro"
     style="@style/Theme.Nightendar"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="118dp"
-        android:layout_height="73dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:text="@string/primary_color"
-        android:textAllCaps="true"
-        style="@style/Theme.Nightendar"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/convergence"
-        android:text="@string/button" />
-
-    <TextView
-        android:layout_width="129dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/convergence"
-        android:gravity="center_vertical"
-        android:text="@string/secondary_color"
-        android:textAlignment="inherit"
-        android:textAllCaps="true"
-        android:textSize="12sp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:contentDescription="@string/email_icon"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-</LinearLayout>
+    tools:context=".MainActivity"/>
