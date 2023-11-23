@@ -47,12 +47,12 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/texto_info"
-            android:layout_width="180dp"
+            android:id="@+id/preferencias"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/preferencias_usuario"
             android:textColor="@color/morado_texto"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,6 +84,57 @@
             android:focusable="auto"
             android:text="@string/usar_ubicacion"
             android:textColor="@color/morado_texto" />
+
+        <TextView
+            android:id="@+id/aviso_legal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aviso_legal"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <TextView
+            android:id="@+id/politica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politica_coockies"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <TextView
+            android:id="@+id/acuerdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acuerdo_usuario"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+
+        <TextView
+            android:id="@+id/privacidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politica_privacidad"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
