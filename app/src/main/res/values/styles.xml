@@ -8,20 +8,23 @@
         <item name="android:textColor">@color/morado_texto</item>
         <item name="android:background">@color/fondo_negro</item>
     </style>
+    <!-- Estilo para el CalenderView -->
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@color/rosado_fondo</item>
         <item name="colorPrimary">@color/rosado_fondo</item>
         <item name="android:background">@color/rosado_fondo</item>
     </style>
-
+    <!-- Estilo para el texto de las fechas en el CalenderView -->
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@color/fondo_negro</item>
         <item name="android:weekNumberColor">@color/fondo_negro</item>
     </style>
 
+    <!-- Estilo para el texto de los días de la semana en el CalenderView -->
     <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
         <item name="android:textColor">@color/fondo_negro</item>
     </style>
+
     <style name="Theme.Nightendar_Light" parent="Theme.Nightendar">
         <!-- Customize your theme here. -->
         <item name="android:textSize">24sp</item>
