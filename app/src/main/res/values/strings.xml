@@ -5,4 +5,7 @@
     <string name="secondary_color">Secondary color</string>
     <string name="email_icon">email icon</string>
     <string name="modo_oscuro">Modo oscuro</string>
+    <string name="recomendaciones">Recomendaciones</string>
+    <string name="usar_ubicacion">Usar Ubicacion</string>
+    <string name="preferencias_usuario">Preferencias de usuario</string>
 </resources>
