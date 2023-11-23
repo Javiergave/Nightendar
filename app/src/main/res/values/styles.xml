@@ -31,7 +31,8 @@
         <item name="android:textAlignment">center</item>
         <item name="android:fontFamily">@font/convergence</item>
         <item name="android:textColor">@color/fondo_negro</item>
-        <item name="android:colorBackground">@color/blanco</item>
+        <item name="android:background">@color/blanco</item>
     </style>
+
 
 </resources>
