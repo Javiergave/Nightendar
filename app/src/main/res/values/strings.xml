@@ -8,4 +8,6 @@
     <string name="recomendaciones">Recomendaciones</string>
     <string name="usar_ubicacion">Usar Ubicacion</string>
     <string name="preferencias_usuario">Preferencias de usuario</string>
+    <string name="Logo">Logo</string>
+    <string name="User_Logo">User Logo</string>
 </resources>
