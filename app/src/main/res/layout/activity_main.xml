@@ -84,7 +84,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
+        app:srcCompat="@drawable/bar.png" />
 
     <ImageView
         android:id="@+id/imageView11"
