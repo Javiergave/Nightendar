@@ -14,4 +14,7 @@
     <string name="politica_privacidad">Política de privacidad</string>
     <string name="Logo">Logo</string>
     <string name="User_Logo">User Logo</string>
+    <string name="left_arrow">Left Arrow</string>
+    <string name="right_arrow">Right Arrow</string>
+    <string name="map">Mapa</string>
 </resources>

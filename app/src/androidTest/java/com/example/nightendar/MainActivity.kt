@@ -1,9 +1,10 @@
 package com.example.nightendar
+
+// MainActivity.kt
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentPagerAdapter
-import androidx.viewpager.widget.ViewPager
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,5 +12,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Puedes agregar aquí más código de inicialización si es necesario
+    }
+
+    // Método que se ejecutará cuando se haga clic en la imagen
+    fun settingOnClick(view: View) {
+        // Crear un Intent para iniciar la actividad de configuración
+        val intent = Intent(this, SettingsActivity::class.java)
+
+        // Iniciar la actividad de configuración
+        startActivity(intent)
     }
 }

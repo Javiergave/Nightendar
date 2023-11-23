@@ -17,7 +17,10 @@
         android:background="@drawable/setting"
         android:contentDescription="@string/Logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="settingClick"
+        />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -39,7 +42,9 @@
         android:contentDescription="@string/User_Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user" />
+        app:srcCompat="@drawable/user"
+        android:clickable="true"
+        android:onClick="userClick"/>
 
     <!-- Se supone que el mes y las flechas son en negro-->
     <CalendarView
@@ -47,9 +52,9 @@
         android:layout_width="289dp"
         android:layout_height="273dp"
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
-        android:unfocusedMonthDateColor="@color/fondo_negro"
         android:focusedMonthDateColor="@color/fondo_negro"
         android:theme="@style/CalenderViewCustom"
+        android:unfocusedMonthDateColor="@color/fondo_negro"
         android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +69,11 @@
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        app:srcCompat="@drawable/star1" />
+        app:srcCompat="@drawable/star1"
+        android:clickable="true"
+        android:onClick="recomendedClick"
+        android:contentDescription="@string/recomendaciones"
+        />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -74,17 +83,22 @@
         android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        app:srcCompat="@drawable/map" />
+        app:srcCompat="@drawable/map"
+        android:clickable="true"
+        android:onClick="mapClick"
+        android:contentDescription="@string/map"
+        />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="62dp"
-        android:layout_height="12dp"
+        android:layout_width="56dp"
+        android:layout_height="11dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
+        android:soundEffectsEnabled="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@drawable/bar.png" />
+        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -105,6 +119,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
         app:srcCompat="@android:drawable/button_onoff_indicator_off" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="62dp"
+        android:layout_height="67dp"
+        android:clickable="true"
+        android:onClick="mapClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calendarView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowright"
+        android:contentDescription="@string/right_arrow"
+        />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="62dp"
+        android:layout_height="67dp"
+        android:clickable="true"
+        android:onClick="recomendedClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/calendarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrowleft"
+        android:contentDescription="@string/left_arrow"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
