@@ -4,4 +4,17 @@
     <string name="button">Button</string>
     <string name="secondary_color">Secondary color</string>
     <string name="email_icon">email icon</string>
+    <string name="modo_oscuro">Modo oscuro</string>
+    <string name="recomendaciones">Recomendaciones</string>
+    <string name="usar_ubicacion">Usar Ubicacion</string>
+    <string name="preferencias_usuario">Preferencias de usuario</string>
+    <string name="aviso_legal">Aviso legal</string>
+    <string name="politica_coockies">Política de cookies</string>
+    <string name="acuerdo_usuario">Acuerdo de usuario</string>
+    <string name="politica_privacidad">Política de privacidad</string>
+    <string name="Logo">Logo</string>
+    <string name="User_Logo">User Logo</string>
+    <string name="left_arrow">Left Arrow</string>
+    <string name="right_arrow">Right Arrow</string>
+    <string name="map">Mapa</string>
 </resources>

@@ -3,4 +3,5 @@
     <color name="fondo_negro">#FF000000</color>
     <color name="blanco">#FFFFFFFF</color>
     <color name="morado_texto">#FF00FF</color>
+    <color name="rosado_fondo">#EDA5F9</color>
 </resources>

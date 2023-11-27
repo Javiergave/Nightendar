@@ -8,7 +8,6 @@ import android.widget.ImageView
 import com.example.nightendar.SettingsActivity
 import com.example.nightendar.R
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

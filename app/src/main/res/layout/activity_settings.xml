@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    style="@style/Theme.Nightendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="@color/fondo_negro"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/logo_nightendar" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting" />
+
+    <LinearLayout
+        android:layout_width="376dp"
+        android:layout_height="567dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="130dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/preferencias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/preferencias_usuario"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <CheckBox
+            android:id="@+id/opcion_modo_oscuro"
+            android:textColor="@color/morado_texto"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:focusable="true"
+            android:text="@string/modo_oscuro" />
+
+        <CheckBox
+            android:id="@+id/opcion_recomendaciones"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:focusable="auto"
+            android:text="@string/recomendaciones"
+            android:textColor="@color/morado_texto" />
+
+        <CheckBox
+            android:id="@+id/opcion_ubicacion"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:focusable="auto"
+            android:text="@string/usar_ubicacion"
+            android:textColor="@color/morado_texto" />
+
+        <TextView
+            android:id="@+id/aviso_legal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aviso_legal"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <TextView
+            android:id="@+id/politica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politica_coockies"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <TextView
+            android:id="@+id/acuerdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acuerdo_usuario"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+
+
+        <TextView
+            android:id="@+id/privacidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politica_privacidad"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
