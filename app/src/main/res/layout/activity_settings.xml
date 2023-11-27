@@ -35,7 +35,7 @@
         android:layout_height="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setting" />
+        app:srcCompat="@drawable/closecircle" />
 
     <LinearLayout
         android:layout_width="376dp"
@@ -48,10 +48,10 @@
 
         <TextView
             android:id="@+id/preferencias"
+            style="@style/userView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/preferencias_usuario"
-            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
@@ -60,7 +60,7 @@
 
         <CheckBox
             android:id="@+id/opcion_modo_oscuro"
-            android:textColor="@color/morado_texto"
+            style="@style/userView"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:enabled="false"
@@ -69,21 +69,21 @@
 
         <CheckBox
             android:id="@+id/opcion_recomendaciones"
+            style="@style/userView"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:focusable="auto"
-            android:text="@string/recomendaciones"
-            android:textColor="@color/morado_texto" />
+            android:text="@string/recomendaciones" />
 
         <CheckBox
             android:id="@+id/opcion_ubicacion"
+            style="@style/userView"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:focusable="auto"
-            android:text="@string/usar_ubicacion"
-            android:textColor="@color/morado_texto" />
+            android:text="@string/usar_ubicacion" />
 
         <Space
             android:layout_width="match_parent"
@@ -91,10 +91,10 @@
 
         <TextView
             android:id="@+id/aviso_legal"
+            style="@style/userView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/aviso_legal"
-            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -107,10 +107,10 @@
 
         <TextView
             android:id="@+id/politica"
+            style="@style/userView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/politica_coockies"
-            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -123,10 +123,10 @@
 
         <TextView
             android:id="@+id/acuerdo"
+            style="@style/userView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/acuerdo_usuario"
-            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -139,10 +139,10 @@
 
         <TextView
             android:id="@+id/privacidad"
+            style="@style/userView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/politica_privacidad"
-            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"

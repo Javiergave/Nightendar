@@ -14,4 +14,7 @@
     <string name="politica_privacidad">Política de privacidad</string>
     <string name="Logo">Logo</string>
     <string name="User_Logo">User Logo</string>
+    <string name="correo_user">Example@gmail.com</string>
+    <string name="numero_user">+34 911 69420</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
 </resources>
