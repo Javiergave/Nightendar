@@ -17,4 +17,6 @@
     <string name="left_arrow">Left Arrow</string>
     <string name="right_arrow">Right Arrow</string>
     <string name="map">Mapa</string>
+    <string name="calendar">Calendar</string>
+
 </resources>
