@@ -1,10 +1,12 @@
 package com.example.nightendar
 
-// MainActivity.kt
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.ImageView
+import com.example.nightendar.SettingsActivity
+import com.example.nightendar.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,15 +14,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Puedes agregar aquí más código de inicialización si es necesario
+        // Obtén la referencia del ImageView
+        val imageView: ImageView = findViewById(R.id.imageView)
+
+        // Configura el OnClickListener para la imagen
+        imageView.setOnClickListener {
+            // Llama a la función para cambiar a la actividad de configuración
+            abrirConfiguracion()
+        }
     }
 
-    // Método que se ejecutará cuando se haga clic en la imagen
-    fun settingOnClick(view: View) {
-        // Crear un Intent para iniciar la actividad de configuración
+    // Función para cambiar a la actividad de configuración
+    private fun abrirConfiguracion() {
         val intent = Intent(this, SettingsActivity::class.java)
-
-        // Iniciar la actividad de configuración
         startActivity(intent)
     }
 }
