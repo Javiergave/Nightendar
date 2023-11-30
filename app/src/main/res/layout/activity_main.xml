@@ -125,14 +125,14 @@
         android:layout_width="62dp"
         android:layout_height="67dp"
         android:clickable="true"
+        android:contentDescription="@string/right_arrow"
         android:onClick="mapClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/calendarView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrowright"
-        android:contentDescription="@string/right_arrow"
-        />
+        app:srcCompat="@drawable/arrowright" />
 
     <ImageView
         android:id="@+id/imageView13"

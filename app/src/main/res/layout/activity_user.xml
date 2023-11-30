@@ -51,43 +51,17 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/preferencias"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/preferencias_usuario"
-            android:textColor="@color/morado_texto"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.067"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="164dp" />
+            android:text="@string/Username"
+            android:textSize="20sp" />
 
-        <CheckBox
-            android:id="@+id/opcion_modo_oscuro"
-            android:layout_width="144dp"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="true"
-            android:text="@string/modo_oscuro"
-            android:textColor="@color/morado_texto" />
-
-        <CheckBox
-            android:id="@+id/opcion_recomendaciones"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="auto"
-            android:text="@string/recomendaciones"
-            android:textColor="@color/morado_texto" />
-
-        <CheckBox
-            android:id="@+id/opcion_ubicacion"
-            android:layout_width="144dp"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="auto"
-            android:text="@string/usar_ubicacion"
-            android:textColor="@color/morado_texto" />
+            android:text="TextView" />
 
         <TextView
             android:id="@+id/aviso_legal"

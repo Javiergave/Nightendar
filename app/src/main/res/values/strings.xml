@@ -18,5 +18,9 @@
     <string name="right_arrow">Right Arrow</string>
     <string name="map">Mapa</string>
     <string name="calendar">Calendar</string>
-
+    <string name="Cerrar">Cerrar</string>
+    <string name="Username">Nombre de Usuario:</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="Login">Iniciar Sesión</string>
 </resources>
