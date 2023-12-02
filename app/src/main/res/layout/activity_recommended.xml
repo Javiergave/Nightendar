@@ -150,19 +150,19 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button" />
+            android:text="Recomendacion 1" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button" />
+            android:text="Recomendacion 2" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button" />
+            android:text="Recomendacion 3" />
     </LinearLayout>
 
 

@@ -7,6 +7,9 @@ import android.widget.ImageView
 
 class RecommendedActivity : AppCompatActivity() {
 
+    private var username: String? = null
+    private var password: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recommended)
@@ -16,6 +19,12 @@ class RecommendedActivity : AppCompatActivity() {
         val imageView14: ImageView = findViewById(R.id.imageView14)
         val imageView8: ImageView = findViewById(R.id.imageView8)
         val imageView: ImageView = findViewById(R.id.imageView)
+        val imageView6: ImageView = findViewById(R.id.imageView6)
+
+        // Obtén el username y el password del Intent
+        val intent: Intent = intent
+        username = intent.getStringExtra("username")
+        password = intent.getStringExtra("password")
 
         // Configura el OnClickListener para imageView12
         imageView12.setOnClickListener {
@@ -34,6 +43,14 @@ class RecommendedActivity : AppCompatActivity() {
             // Llama a la función para ir a MapActivity
             abrirMapa()
         }
+
+        // Configura el OnClickListener para imageView6
+        imageView6.setOnClickListener {
+            // Llama a la función para cambiar a la actividad de configuración
+            abrirUser()
+        }
+
+        // Configura el OnClickListener para imageView
         imageView.setOnClickListener {
             // Llama a la función para cambiar a la actividad de configuración
             abrirConfiguracion()
@@ -45,14 +62,28 @@ class RecommendedActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-    private fun abrirConfiguracion() {
-        val intent = Intent(this, SettingsActivity::class.java)
-        startActivity(intent)
-    }
 
     // Función para ir a MapActivity
     private fun abrirMapa() {
         val intent = Intent(this, MapActivity::class.java)
+        intent.putExtra("username", username)
+        intent.putExtra("password", password)
+        startActivity(intent)
+    }
+
+    // Función para cambiar a la actividad de configuración
+    private fun abrirConfiguracion() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        intent.putExtra("username", username)
+        intent.putExtra("password", password)
+        startActivity(intent)
+    }
+
+    // Función para cambiar a la actividad de usuario
+    private fun abrirUser() {
+        val intent = Intent(this, UserActivity::class.java)
+        intent.putExtra("username", username)
+        intent.putExtra("password", password)
         startActivity(intent)
     }
 }

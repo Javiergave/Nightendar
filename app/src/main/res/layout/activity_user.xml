@@ -23,22 +23,13 @@
         />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user"
-        android:contentDescription="@string/User_Logo"/>
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/Cerrar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/closecircle"
-        android:contentDescription="@string/Cerrar"/>
+        app:srcCompat="@drawable/closecircle" />
 
     <LinearLayout
         android:layout_width="376dp"
@@ -59,9 +50,24 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:layout_width="346dp"
+            android:layout_height="36dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/Contraseña"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="TextView"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/aviso_legal"
@@ -112,5 +118,14 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/User_Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
