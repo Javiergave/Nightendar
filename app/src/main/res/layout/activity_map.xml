@@ -68,16 +68,29 @@
         android:id="@+id/imageView4"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="172dp"
         android:layout_marginTop="64dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:contentDescription="@string/calendar"
         android:onClick="recomendedClick"
         app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapView"
         app:srcCompat="@drawable/calendar" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="62dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -105,18 +118,6 @@
         app:srcCompat="@android:drawable/button_onoff_indicator_off" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="62dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="78dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
-
-    <ImageView
         android:id="@+id/imageView13"
         android:layout_width="62dp"
         android:layout_height="67dp"
@@ -135,8 +136,20 @@
         android:contentDescription="@string/map"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="309dp"
+        android:layout_height="330dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="156dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:srcCompat="@android:drawable/ic_menu_mapmode" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

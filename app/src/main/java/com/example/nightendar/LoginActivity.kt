@@ -31,10 +31,13 @@ class LoginActivity : AppCompatActivity() {
             editor.putString("username", username)
             editor.apply()
 
-            // Abre la MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            // Abre la MainActivity y envía el usuario y la contraseña como extras
+            val mainIntent = Intent(this, MainActivity::class.java)
+            mainIntent.putExtra("username", username)
+            mainIntent.putExtra("password", password)
+            startActivity(mainIntent)
             finish()  // Cierra LoginActivity para evitar volver atrás desde MainActivity
         }
+
     }
 }
