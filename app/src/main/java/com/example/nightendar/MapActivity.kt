@@ -63,6 +63,7 @@ class MapActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para cambiar a la actividad de usuario
@@ -72,17 +73,20 @@ class MapActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para cambiar a la actividad recomendada
     private fun abrirRecomendada() {
         val intent = Intent(this, RecommendedActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     // Función para volver a la actividad principal
     private fun volverAMain() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
