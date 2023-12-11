@@ -1,26 +1,24 @@
 package com.example.nightendar
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import com.example.nightendar.R
-import com.example.nightendar.SettingsActivity
 
-class MainActivity : AppCompatActivity() {
+class RecommendedActivity : AppCompatActivity() {
 
     private var username: String? = null
     private var password: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_recommended)
 
-        // Obtén la referencia del ImageView
-        val imageView: ImageView = findViewById(R.id.imageView)
+        // Obtén la referencia de los ImageViews
         val imageView12: ImageView = findViewById(R.id.imageView12)
+        val imageView14: ImageView = findViewById(R.id.imageView14)
         val imageView8: ImageView = findViewById(R.id.imageView8)
-        val imageView7: ImageView = findViewById(R.id.imageView7)
-        val imageView13: ImageView = findViewById(R.id.imageView13)
+        val imageView: ImageView = findViewById(R.id.imageView)
         val imageView6: ImageView = findViewById(R.id.imageView6)
 
         // Obtén el username y el password del Intent
@@ -28,38 +26,44 @@ class MainActivity : AppCompatActivity() {
         username = intent.getStringExtra("username")
         password = intent.getStringExtra("password")
 
-        // Configura el OnClickListener para imageView6
-        imageView6.setOnClickListener {
-            abrirUser()
-        }
-
         // Configura el OnClickListener para imageView12
         imageView12.setOnClickListener {
-            abrirMapa()
+            // Llama a la función para volver a MainActivity
+            volverAMain()
+        }
+
+        // Configura el OnClickListener para imageView14
+        imageView14.setOnClickListener {
+            // Llama a la función para volver a MainActivity
+            volverAMain()
         }
 
         // Configura el OnClickListener para imageView8
         imageView8.setOnClickListener {
+            // Llama a la función para ir a MapActivity
             abrirMapa()
         }
 
-        // Configura el OnClickListener para imageView7
-        imageView7.setOnClickListener {
-            abrirRecomendada()
-        }
-
-        // Configura el OnClickListener para imageView13
-        imageView13.setOnClickListener {
-            abrirRecomendada()
+        // Configura el OnClickListener para imageView6
+        imageView6.setOnClickListener {
+            // Llama a la función para cambiar a la actividad de configuración
+            abrirUser()
         }
 
         // Configura el OnClickListener para imageView
         imageView.setOnClickListener {
+            // Llama a la función para cambiar a la actividad de configuración
             abrirConfiguracion()
         }
     }
 
-    // Función para cambiar a la actividad de map
+    // Función para volver a MainActivity
+    private fun volverAMain() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    // Función para ir a MapActivity
     private fun abrirMapa() {
         val intent = Intent(this, MapActivity::class.java)
         intent.putExtra("username", username)
@@ -75,14 +79,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    // Función para cambiar a la actividad recomendada
-    private fun abrirRecomendada() {
-        val intent = Intent(this, RecommendedActivity::class.java)
-        intent.putExtra("username", username)
-        intent.putExtra("password", password)
-        startActivity(intent)
-    }
-
     // Función para cambiar a la actividad de usuario
     private fun abrirUser() {
         val intent = Intent(this, UserActivity::class.java)
@@ -91,4 +87,3 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 }
-

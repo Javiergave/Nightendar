@@ -6,7 +6,7 @@
     style="@style/Theme.Nightendar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp"
+    android:layout_margin="16dp"
     android:background="@color/fondo_negro"
     android:textAlignment="center"
     tools:context=".MainActivity">
@@ -15,128 +15,117 @@
         android:id="@+id/imageView"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:contentDescription="Logo"
+        android:contentDescription="@string/Logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo_nightendar" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/closecircle" />
+        app:srcCompat="@mipmap/logo_nightendar"
+        />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/Cerrar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/setting" />
+        app:srcCompat="@drawable/closecircle" />
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="376dp"
         android:layout_height="567dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="130dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/correo"
-                style="@style/userView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:paddingTop="5dp"
-                android:text="@string/correo_user"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.067"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
-
-            <ImageView
-                android:id="@+id/imageEditEmail"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:minHeight="35dp"
-                app:srcCompat="@drawable/star1" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/numero"
-                style="@style/userView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:paddingTop="5dp"
-                android:text="@string/numero_user"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.067"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
-
-            <ImageView
-                android:id="@+id/imageEditNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:minHeight="35dp"
-                app:srcCompat="@drawable/star1" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="282dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/acuerdo_usuario"
-            style="@style/userView"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Username"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="346dp"
+            android:layout_height="36dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Contraseña"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/aviso_legal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/acuerdo_usuario"
+            android:text="@string/aviso_legal"
+            android:textColor="@color/morado_texto"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
 
-        <LinearLayout
-            android:id="@+id/cerrar_sesion"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/politica"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:text="@string/politica_coockies"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cerrar_sesion" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/acuerdo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acuerdo_usuario"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
 
+
+        <TextView
+            android:id="@+id/privacidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/politica_privacidad"
+            android:textColor="@color/morado_texto"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="164dp" />
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/User_Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
