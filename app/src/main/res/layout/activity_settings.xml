@@ -45,18 +45,24 @@
         android:layout_height="567dp"
         android:orientation="vertical"
         android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="MissingConstraints">
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
         <TextView
             android:id="@+id/preferencias"
-            android:layout_width="wrap_content"
+            android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:text="@string/preferencias_usuario"
             android:textColor="@color/morado_texto"
-            android:textSize="20sp"
+            android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,30 +70,37 @@
 
         <CheckBox
             android:id="@+id/opcion_modo_oscuro"
-            android:layout_width="144dp"
+            android:layout_width="158dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:focusable="true"
             android:text="@string/modo_oscuro"
-            android:textColor="@color/morado_texto" />
+            android:textColor="@color/morado_texto"
+            android:textSize="14sp" />
 
         <CheckBox
             android:id="@+id/opcion_recomendaciones"
-            android:layout_width="144dp"
+            android:layout_width="193dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:focusable="auto"
             android:text="@string/recomendaciones"
-            android:textColor="@color/morado_texto" />
+            android:textColor="@color/morado_texto"
+            android:textSize="14sp" />
 
         <CheckBox
             android:id="@+id/opcion_ubicacion"
-            android:layout_width="144dp"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:focusable="auto"
             android:text="@string/usar_ubicacion"
-            android:textColor="@color/morado_texto" />
+            android:textColor="@color/morado_texto"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
         <TextView
             android:id="@+id/aviso_legal"
@@ -101,6 +114,10 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
         <TextView
             android:id="@+id/politica"
             android:layout_width="wrap_content"
@@ -112,6 +129,10 @@
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/acuerdo"
@@ -125,6 +146,10 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
 
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
             android:id="@+id/privacidad"
