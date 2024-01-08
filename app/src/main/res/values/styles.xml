@@ -34,5 +34,9 @@
         <item name="android:background">@color/blanco</item>
     </style>
 
+    <!-- Estilo para el activity_user -->
+    <style name="userView" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/blanco</item>
+    </style>
 
 </resources>
