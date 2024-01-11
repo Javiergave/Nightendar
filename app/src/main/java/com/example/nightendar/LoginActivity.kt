@@ -1,9 +1,12 @@
 package com.example.nightendar
 
+import android.content.ContentValues
 import android.content.Intent
+import android.database.Cursor
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -25,19 +28,34 @@ class LoginActivity : AppCompatActivity() {
             val username = editTextUsername.text.toString()
             val password = editTextPassword.text.toString()
 
-            // Guarda el usuario y la contraseña si es necesario
-            val sharedPreferences = getSharedPreferences("user_info", MODE_PRIVATE)
-            val editor = sharedPreferences.edit()
-            editor.putString("username", username)
-            editor.apply()
+            //Comprueba Login Valido
+            val admin = BaseDatosApp(this, "bdnightendar", null, 1)
+            val bdnightendar = admin.writableDatabase
+            val fila = bdnightendar.rawQuery("SELECT USERNAME,PASSWORD FROM USERS WHERE USERNAME='${username}' AND PASSWORD='${password}'",null)
+            var user = "admin"
+            var pass = "admin"
+            if (fila.moveToFirst()) {
+                user = fila.getString(0)
+                pass = fila.getString(1)
+            }
+            if (user == username && pass == password) {
+                // Abre la MainActivity y envía el usuario y la contraseña como extras
 
-            // Abre la MainActivity y envía el usuario y la contraseña como extras
-            val mainIntent = Intent(this, MainActivity::class.java)
-            mainIntent.putExtra("username", username)
-            mainIntent.putExtra("password", password)
-            startActivity(mainIntent)
-            finish()  // Cierra LoginActivity para evitar volver atrás desde MainActivity
+                val mainIntent = Intent(this, MainActivity::class.java)
+                mainIntent.putExtra("username", username)
+                mainIntent.putExtra("password", password)
+                startActivity(mainIntent)
+                finish()
+
+            // Cierra LoginActivity para evitar volver atrás desde MainActivity
+            }
+            else{
+                Toast.makeText(this,"Usuario o Contraseña Incorrecta",Toast.LENGTH_LONG).show()
+            }
         }
 
     }
 }
+
+
+
