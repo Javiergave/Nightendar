@@ -24,5 +24,6 @@
     <string name="Email">Email</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Login">Iniciar Sesión</string>
+    <string name="infoUsuario">Información de usuario</string>
     <string name="Register">Registrarse</string>
 </resources>
