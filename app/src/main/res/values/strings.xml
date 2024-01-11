@@ -21,6 +21,8 @@
     <string name="Cerrar">Cerrar</string>
     <string name="Username">Nombre de Usuario:</string>
     <string name="Usuario">Usuario</string>
+    <string name="Email">Email</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Login">Iniciar Sesión</string>
+    <string name="Register">Registrarse</string>
 </resources>
