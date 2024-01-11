@@ -1,10 +1,16 @@
 package com.example.nightendar
+import RecomendacionAdapter
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.nightendar.R
 import com.example.nightendar.SettingsActivity
+import com.example.nightendar.data.Recomendacion
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // Obtén la referencia del ImageView
         val imageView: ImageView = findViewById(R.id.imageView)
