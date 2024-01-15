@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para cambiar a la actividad de configuración
@@ -80,6 +81,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para cambiar a la actividad recomendada
@@ -88,6 +90,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para cambiar a la actividad de usuario
@@ -96,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 }
 
