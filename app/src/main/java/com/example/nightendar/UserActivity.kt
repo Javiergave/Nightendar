@@ -45,6 +45,7 @@ class UserActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
 
     // Función para abrir MainActivity

@@ -50,5 +50,7 @@ class SettingsActivity : AppCompatActivity() {
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
+        finish()
     }
+
 }
