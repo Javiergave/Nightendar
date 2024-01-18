@@ -65,61 +65,32 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="75dp"
+        android:layout_height="57dp"
         android:clickable="true"
         android:contentDescription="@string/map"
         android:onClick="mapClick"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
         app:srcCompat="@drawable/map" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="56dp"
-        android:layout_height="11dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
-        android:soundEffectsEnabled="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
-        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
-
-    <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="78dp"
+        android:layout_height="61dp"
         android:clickable="true"
         android:contentDescription="@string/recomendaciones"
         android:onClick="recomendedClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.919"
         app:srcCompat="@drawable/star1" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="62dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="93dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="160dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView"
-        app:srcCompat="@android:drawable/button_onoff_indicator_off" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -148,6 +119,18 @@
         app:srcCompat="@drawable/arrowleft"
         android:contentDescription="@string/left_arrow"
         />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92"
+        app:srcCompat="@drawable/calendar"
+        app:tint="@android:color/white" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

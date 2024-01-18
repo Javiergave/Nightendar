@@ -23,7 +23,7 @@ class RecommendedActivity : AppCompatActivity() {
         // Obtén la referencia de los ImageViews
         val imageView12: ImageView = findViewById(R.id.imageView12)
         val imageView14: ImageView = findViewById(R.id.imageView14)
-        val imageView8: ImageView = findViewById(R.id.imageView8)
+        val imageView17: ImageView = findViewById(R.id.imageView17)
         val imageView: ImageView = findViewById(R.id.imageView)
         val imageView6: ImageView = findViewById(R.id.imageView6)
 
@@ -45,7 +45,7 @@ class RecommendedActivity : AppCompatActivity() {
         }
 
         // Configura el OnClickListener para imageView8
-        imageView8.setOnClickListener {
+        imageView17.setOnClickListener {
             // Llama a la función para ir a MapActivity
             abrirMapa()
         }
