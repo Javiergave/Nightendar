@@ -135,7 +135,7 @@ class RecommendedActivity : AppCompatActivity() {
                 val ubicacion = fila.getString(2)
                 val rating = fila.getDouble(3)
 
-                val recomendacion = Recomendacion(id, nombre, ubicacion, rating)  // Nota: rating temporalmente establecido en 0.0
+                val recomendacion = Recomendacion(id, nombre, ubicacion, rating)
                 recomendaciones.add(recomendacion)
 
             } while (fila.moveToNext())
