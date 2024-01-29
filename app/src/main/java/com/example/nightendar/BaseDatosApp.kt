@@ -14,7 +14,7 @@ class BaseDatosApp(context: Context?, name: String?, factory: SQLiteDatabase.Cur
                     "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     "NAME TEXT, " +
                     "UBICACION TEXT, " +
-                    "RATING REAL)"
+                    "RATING DOUBLE)"
         )
         val createLocalesUserTable = "CREATE TABLE LOCALESUSER(ID INTEGER PRIMARY KEY AUTOINCREMENT,USERID INTEGER, LOCALID INTEGER, FOREIGN KEY(USERID) REFERENCES USERS(ID), FOREIGN KEY(LOCALID) REFERENCES LOCALS(ID))"
         database?.execSQL(createLocalesUserTable)
