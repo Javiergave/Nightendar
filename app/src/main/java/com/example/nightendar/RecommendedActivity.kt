@@ -23,14 +23,16 @@ class RecommendedActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         recomendacionAdapter = RecomendacionAdapter()
 
-        // Configura el RecyclerView con un LinearLayoutManager y el adaptador
+// Configura el RecyclerView con un LinearLayoutManager y el adaptador
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = recomendacionAdapter
 
-        // Llena el adaptador con tus datos (recomendaciones)
+// Llena el adaptador con tus datos (recomendaciones)
+        // Llena el adaptador con los datos de las recomendaciones obtenidas de la base de datos
         val recomendaciones = obtenerRecomendaciones()
-        Log.d("Recomendaciones", "Recomendaciones obtenidas: $recomendaciones")
         recomendacionAdapter.actualizarDatos(recomendaciones)
+
+
 
         // Obtén la referencia de los ImageViews
         val imageView12: ImageView = findViewById(R.id.imageView12)
