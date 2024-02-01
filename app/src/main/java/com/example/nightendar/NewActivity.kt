@@ -80,7 +80,7 @@ class NewActivity : AppCompatActivity() {
         reg.put("RATING",localRating)
         bd.insert("LOCAL", null, reg)
         bd.close()
-        val intent = Intent(this, UserActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         // Pasa el nombre de usuario y la contraseña como extras
         intent.putExtra("username", username)
         intent.putExtra("password", password)
