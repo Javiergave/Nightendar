@@ -67,15 +67,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/closecircle" />
 
-    <!-- Se supone que el mes y las flechas son en negro-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="217dp"
-        android:layout_height="335dp"
-        android:layout_marginTop="96dp"
+    <EditText
+        android:id="@+id/editTextLocalName"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
+        android:background="@color/morado_texto"
+        android:hint="Nom del Local"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <EditText
+        android:id="@+id/editTextLocalLocation"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
+        android:background="@color/morado_texto"
+        android:ems="10"
+        android:hint="Direcció del Local"
+        android:inputType="text"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName"
+        app:layout_constraintVertical_bias="0.184" />
+
+    <TextView
+        android:id="@+id/textViewNomLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Nom del Local"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLocalName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDireccioLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direcció del Local"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLocalLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
+        android:max="5"
+        android:numStars="5"
+        android:progressDrawable="@drawable/star1"
+        android:rating="1"
+        android:stepSize="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName"
+        app:layout_constraintVertical_bias="0.456" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
