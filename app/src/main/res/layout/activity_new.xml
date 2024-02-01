@@ -14,13 +14,18 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:srcCompat="@drawable/setting"
+        android:background="@drawable/setting"
+        android:clickable="true"
+
         android:contentDescription="@string/Logo"
+        android:onClick="settingClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         android:clickable="true"
         android:onClick="settingClick"
         app:tint="@color/morado_texto"/>
+
 
     <ImageView
         android:id="@+id/imageView5"
@@ -31,7 +36,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo_nightendar" />
+        app:srcCompat="@mipmap/logo_nightendar"
+        app:tint="#FF00FF" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -47,6 +53,8 @@
         android:onClick="userClick"
         app:tint="@color/morado_texto"/>
 
+
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="74dp"
@@ -57,6 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/closecircle"
         app:tint="@color/morado_texto"/>
+
 
     <ImageView
         android:id="@+id/imageView6"
@@ -69,6 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/closecircle"
         app:tint="@color/morado_texto"/>
+
 
     <EditText
         android:id="@+id/editTextLocalName"
@@ -131,7 +141,7 @@
         android:layout_height="59dp"
         android:max="5"
         android:numStars="5"
-        android:progressDrawable="@drawable/star1"
+        android:progressDrawable="@drawable/starpurple"
         android:rating="1"
         android:stepSize="1.0"
         app:layout_constraintBottom_toBottomOf="parent"
