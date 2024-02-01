@@ -14,13 +14,13 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/setting"
+        app:srcCompat="@drawable/setting"
         android:contentDescription="@string/Logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:clickable="true"
         android:onClick="settingClick"
-        />
+        app:tint="@color/morado_texto" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -44,7 +44,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user"
         android:clickable="true"
-        android:onClick="userClick"/>
+        android:onClick="userClick"
+        app:tint="@color/morado_texto"/>
 
     <!-- Se supone que el mes y las flechas son en negro-->
 
@@ -60,7 +61,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.892"
-        app:srcCompat="@drawable/star1" />
+        app:srcCompat="@drawable/star1"
+        app:tint="@color/morado_texto"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -74,7 +76,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.892"
-        app:srcCompat="@drawable/calendar" />
+        app:srcCompat="@drawable/calendar"
+        app:tint="@color/morado_texto"/>
 
     <ImageView
         android:id="@+id/imageView13"
@@ -86,7 +89,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrowleft" />
+        app:srcCompat="@drawable/arrowleft"
+        app:tint="@color/morado_texto"/>
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"
