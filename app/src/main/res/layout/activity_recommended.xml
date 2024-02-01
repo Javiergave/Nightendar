@@ -63,16 +63,16 @@
         app:srcCompat="@drawable/arrowright"
         app:tint="@color/morado_texto"/>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="217dp"
         android:layout_height="335dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
 
     <ImageView
         android:id="@+id/imageView15"
