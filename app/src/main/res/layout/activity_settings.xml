@@ -34,7 +34,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user" />
+        app:srcCompat="@drawable/user"
+        app:tint="@color/morado_texto"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -47,7 +48,8 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/closecircle" />
+        app:srcCompat="@drawable/closecircle"
+        app:tint="@color/morado_texto"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
