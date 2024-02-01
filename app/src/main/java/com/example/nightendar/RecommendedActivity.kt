@@ -124,7 +124,7 @@ class RecommendedActivity : AppCompatActivity() {
     private fun obtenerRecomendaciones(): List<Recomendacion> {
         val ad = BaseDatosApp(this, "bdnightendar", null, 1)
         val bd = ad.writableDatabase
-        val fila = bd.rawQuery("SELECT ID, NAME, UBICACION, RATING FROM LOCAL", null)
+        val fila = bd.rawQuery("SELECT ID, NAME, UBICACION, RATING FROM LOCAL ORDER BY RATING DESC", null)
 
         val recomendaciones = mutableListOf<Recomendacion>()
 
