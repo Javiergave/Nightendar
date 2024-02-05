@@ -15,10 +15,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/setting"
-        android:clickable="true"
 
         android:contentDescription="@string/Logo"
-        android:onClick="settingClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -143,7 +141,7 @@
         android:numStars="5"
         android:progressDrawable="@drawable/starpurple"
         android:rating="1"
-        android:stepSize="1.0"
+        android:stepSize="0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
