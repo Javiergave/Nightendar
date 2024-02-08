@@ -38,5 +38,9 @@
     <style name="userView" parent="Theme.AppCompat">
         <item name="android:textColor">@color/blanco</item>
     </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/blanco</item>
+        <item name="colorControlActivated">@color/morado_texto</item>
+    </style>
 
 </resources>

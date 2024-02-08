@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,13 +15,13 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/setting"
 
+        android:clickable="true"
         android:contentDescription="@string/Logo"
+        android:onClick="settingClick"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
-        android:clickable="true"
-        android:onClick="settingClick"
-        app:tint="@color/morado_texto"/>
+        app:tint="@color/morado_texto" />
 
 
     <ImageView
@@ -43,39 +42,37 @@
         android:layout_height="70dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:clickable="true"
         android:contentDescription="@string/User_Logo"
+        android:onClick="userClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user"
-        android:clickable="true"
-        android:onClick="userClick"
-        app:tint="@color/morado_texto"/>
-
+        app:tint="@color/morado_texto" />
 
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="74dp"
         android:layout_height="71dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/closecircle"
-        app:tint="@color/morado_texto"/>
-
+        app:tint="@color/morado_texto" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="74dp"
         android:layout_height="71dp"
         android:layout_marginStart="72dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="40dp"
         android:rotation="45"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/closecircle"
-        app:tint="@color/morado_texto"/>
+        app:tint="@color/morado_texto" />
 
 
     <EditText
@@ -92,7 +89,31 @@
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.175" />
+
+    <TextView
+        android:id="@+id/textViewNomLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Nom del Local"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLocalName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDireccioLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Direcció del Local"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLocalLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextLocalLocation"
@@ -109,46 +130,34 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLocalName"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <TextView
-        android:id="@+id/textViewNomLocal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="Nom del Local"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextLocalName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewDireccioLocal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Direcció del Local"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextLocalLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName" />
+        app:layout_constraintVertical_bias="0.172" />
 
     <RatingBar
+        android:theme="@style/RatingBar"
         android:id="@+id/ratingBar"
-        android:layout_width="271dp"
+        android:layout_width="245dp"
         android:layout_height="59dp"
-        android:max="5"
-        android:numStars="5"
-        android:progressDrawable="@drawable/starpurple"
-        android:rating="1"
-        android:stepSize="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalLocation" />
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/morado_texto"
+        android:text="Rating"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLocalName"
-        app:layout_constraintVertical_bias="0.456"
-        app:tint="@color/morado_texto"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextLocalLocation"
+        app:layout_constraintVertical_bias="0.383" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
