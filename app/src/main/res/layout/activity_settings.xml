@@ -85,31 +85,34 @@
             android:id="@+id/opcion_modo_oscuro"
             android:layout_width="158dp"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:enabled="true"
             android:focusable="true"
             android:text="@string/modo_oscuro"
             android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:checked="true" />
 
         <CheckBox
             android:id="@+id/opcion_recomendaciones"
             android:layout_width="193dp"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:enabled="true"
             android:focusable="auto"
             android:text="@string/recomendaciones"
             android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:checked="true" />
 
         <CheckBox
             android:id="@+id/opcion_ubicacion"
             android:layout_width="175dp"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:enabled="true"
             android:focusable="auto"
             android:text="@string/usar_ubicacion"
             android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:checked="true"/>
 
         <Space
             android:layout_width="match_parent"

@@ -14,15 +14,13 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/setting"
-
+        app:srcCompat="@drawable/setting"
         android:contentDescription="@string/Logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         android:clickable="true"
         android:onClick="settingClick"
-        app:tint="@color/morado_texto"/>
+        app:tint="@color/morado_texto" />
 
 
     <ImageView
