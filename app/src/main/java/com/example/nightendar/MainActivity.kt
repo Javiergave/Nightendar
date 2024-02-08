@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val imageView7: ImageView = findViewById(R.id.imageView7)
         val imageView13: ImageView = findViewById(R.id.imageView13)
         val imageView6: ImageView = findViewById(R.id.imageView6)
+        val imageView16: ImageView = findViewById(R.id.imageView16)
 
         // Obtén el username y el password del Intent
         val intent: Intent = intent
@@ -64,6 +65,10 @@ class MainActivity : AppCompatActivity() {
         imageView.setOnClickListener {
             abrirConfiguracion()
         }
+
+        imageView16.setOnClickListener {
+            abrirNew()
+        }
     }
 
     // Función para cambiar a la actividad de map
@@ -96,6 +101,14 @@ class MainActivity : AppCompatActivity() {
     // Función para cambiar a la actividad de usuario
     private fun abrirUser() {
         val intent = Intent(this, UserActivity::class.java)
+        intent.putExtra("username", username)
+        intent.putExtra("password", password)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun abrirNew() {
+        val intent = Intent(this, NewActivity::class.java)
         intent.putExtra("username", username)
         intent.putExtra("password", password)
         startActivity(intent)
