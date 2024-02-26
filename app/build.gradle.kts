@@ -53,4 +53,7 @@ dependencies {
     androidTestImplementation("junit:junit:4.13.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("org.robolectric:robolectric:4.7.1")
+    testImplementation("org.mockito:mockito-core:3.12.4")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
+
 }
