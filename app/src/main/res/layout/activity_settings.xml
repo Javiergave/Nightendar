@@ -65,51 +65,96 @@
         app:layout_constraintVertical_bias="0.741"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/preferencias"
-            android:layout_width="343dp"
+        <LinearLayout
+            android:id="@+id/modoOscuro"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
-            android:text="@string/preferencias_usuario"
-            android:textColor="@color/morado_texto"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.067"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="164dp" />
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch_recomendaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="true"
+                android:enabled="true"
+                android:focusable="auto"
+                app:thumbTint="#FFFFFFFF"
+                app:trackTint="#FF00FF" />
+
+            <TextView
+                android:id="@+id/opcion_modo_oscuro"
+                android:layout_width="96dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/modo_oscuro"
+                android:textColor="@color/morado_texto"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="20dp" />
 
-        <CheckBox
-            android:id="@+id/opcion_modo_oscuro"
-            android:layout_width="158dp"
+        <LinearLayout
+            android:id="@+id/recomedaciones"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="true"
-            android:text="@string/modo_oscuro"
-            android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/opcion_recomendaciones"
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="auto"
-            android:text="@string/recomendaciones"
-            android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            <Switch
+                android:id="@+id/switch_recomendaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="true"
+                android:enabled="true"
+                android:focusable="auto"
+                android:textColor="@color/morado_texto"
+                app:thumbTint="@color/colorThumbTint"
+                app:trackTint="@color/colorTrackTint" />
 
-        <CheckBox
-            android:id="@+id/opcion_ubicacion"
-            android:layout_width="175dp"
+            <TextView
+                android:id="@+id/opcion_recomendaciones"
+                android:layout_width="159dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/recomendaciones"
+                android:textColor="@color/morado_texto"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:id="@+id/ubicacion"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:enabled="false"
-            android:focusable="auto"
-            android:text="@string/usar_ubicacion"
-            android:textColor="@color/morado_texto"
-            android:textSize="14sp" />
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch_ubicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:checked="true"
+                android:enabled="true"
+                android:focusable="auto"
+                android:textColor="@color/morado_texto"
+                app:buttonTint="@color/morado_texto" />
+
+            <TextView
+                android:id="@+id/opcion_ubicacion"
+                android:layout_width="131dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/usar_ubicacion"
+                android:textColor="@color/morado_texto"
+                android:textSize="16sp" />
+        </LinearLayout>
 
         <Space
             android:layout_width="match_parent"
@@ -159,7 +204,6 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="164dp" />
 
-
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
@@ -178,3 +222,4 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
