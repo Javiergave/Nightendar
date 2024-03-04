@@ -70,7 +70,7 @@ class NewActivity : AppCompatActivity() {
     private fun guardarEstancia() {
         var localName=editTextlocalName.text.toString()
         var localUbi=editTextLocalLocation.text.toString()
-        var localRating=rating.getRating().toInt()
+        var localRating=rating.getRating()
         val admin = BaseDatosApp(this,"bdnightendar",null,1)
         val bd = admin.writableDatabase
         val reg = ContentValues()
