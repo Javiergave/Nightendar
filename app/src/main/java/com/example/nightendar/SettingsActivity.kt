@@ -1,7 +1,9 @@
 package com.example.nightendar
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.CheckBox
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -23,7 +25,6 @@ class SettingsActivity : AppCompatActivity() {
         username = intent.getStringExtra("username")
         password = intent.getStringExtra("password")
 
-        // Configura el OnClickListener para imageView3 (volver a MainActivity)
         imageView3.setOnClickListener {
             // Llama a la función para volver a la actividad principal
             volverAMain()

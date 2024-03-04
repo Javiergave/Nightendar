@@ -4,4 +4,7 @@
     <color name="blanco">#FFFFFFFF</color>
     <color name="morado_texto">#FF00FF</color>
     <color name="rosado_fondo">#EDA5F9</color>
+    <color name="colorThumbTint">#FFFFFFFF</color> <!-- Color del "pulgar" del interruptor cuando está en la posición ON -->
+    <color name="colorTrackTint">#FF00FF</color> <!-- Color del riel del interruptor -->
+
 </resources>

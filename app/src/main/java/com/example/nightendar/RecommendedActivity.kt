@@ -1,9 +1,7 @@
 package com.example.nightendar
 
 import android.content.Intent
-import android.database.DatabaseUtils
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
