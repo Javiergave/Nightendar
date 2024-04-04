@@ -24,14 +24,11 @@ import java.io.FileOutputStream
 
 
 class UserActivity : AppCompatActivity() {
-    var tituloText = "Este es el titulo del documento"
-    var descripcionText =  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \n" +
-            "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, \n" +
-            "when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n" +
-            "It has survived not only five centuries, but also the leap into electronic typesetting, \n" +
-            "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset\n" +
-            " sheets containing Lorem Ipsum passages, and more recently with desktop publishing software\n" +
-            " like Aldus PageMaker including versions of Lorem Ipsum.\n";
+    private val usuarios = arrayOf("Javi Ruiz", "Luis Gonzales", "Ramon Font", "Raul Blanco", "Alvaro Domingo")
+    private val tituloText = "Informe de usuarios"
+    private val descripcionText = "Número de Usuarios que han iniciado sesión: ${usuarios.size}\n"
+
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,19 +85,17 @@ class UserActivity : AppCompatActivity() {
     }
 
     fun generarPdf() {
+        val pdfDocument = PdfDocument()
+        val paint = Paint()
+        val titulo = TextPaint()
+        val descripcion = TextPaint()
 
-        var pdfDocument = PdfDocument()
-        var paint = Paint()
-        var titulo = TextPaint()
-        var descripcion = TextPaint()
+        val paginaInfo = PdfDocument.PageInfo.Builder(816, 1054, 1).create()
+        val pagina1 = pdfDocument.startPage(paginaInfo)
+        val canvas = pagina1.canvas
 
-        var paginaInfo = PdfDocument.PageInfo.Builder(816, 1054, 1).create()
-        var pagina1 = pdfDocument.startPage(paginaInfo)
-
-        var canvas = pagina1.canvas
-
-        var bitmap = BitmapFactory.decodeResource(resources, R.mipmap.logo_nightendar)
-        var bitmapEscala = Bitmap.createScaledBitmap(bitmap, 80,80, false)
+        val bitmap = BitmapFactory.decodeResource(resources, R.mipmap.logo_nightendar)
+        val bitmapEscala = Bitmap.createScaledBitmap(bitmap, 80, 80, false)
         canvas.drawBitmap(bitmapEscala, 368f, 20f, paint)
 
         titulo.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD))
@@ -110,11 +105,16 @@ class UserActivity : AppCompatActivity() {
         descripcion.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL))
         descripcion.textSize = 14f
 
-        var arrDescripcion = descripcionText.split("\n")
+        val arrDescripcion = descripcionText.split("\n")
 
         var y = 200f
         for (item in arrDescripcion) {
             canvas.drawText(item, 10f, y, descripcion)
+            y += 15
+        }
+
+        for (usuario in usuarios) {
+            canvas.drawText(usuario, 10f, y, descripcion)
             y += 15
         }
 
@@ -123,13 +123,12 @@ class UserActivity : AppCompatActivity() {
         val file = File(Environment.getExternalStorageDirectory(), "Archivo.pdf")
         try {
             pdfDocument.writeTo(FileOutputStream(file))
-            Toast.makeText(this, "Se creo el PDF correctamente", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Se creó el PDF correctamente", Toast.LENGTH_LONG).show()
         } catch (e: Exception) {
             e.printStackTrace()
         }
 
         pdfDocument.close()
-
     }
 
     private fun checkPermission(): Boolean {
