@@ -1,12 +1,18 @@
 package com.example.nightendar
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.TooltipCompat
+import androidx.core.widget.ImageViewCompat
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +20,12 @@ class MainActivity : AppCompatActivity() {
     private var username: String? = null
     private var password: String? = null
 
+    @SuppressLint("WrongViewCast")
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // Obtén la referencia del ImageView
         val imageView: ImageView = findViewById(R.id.imageView)
@@ -26,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         val imageView13: ImageView = findViewById(R.id.imageView13)
         val imageView6: ImageView = findViewById(R.id.imageView6)
         val imageView16: ImageView = findViewById(R.id.imageView16)
+
+        //val fab: FloatingActionButton = findViewById(R.id.imageView16)
+        //fab.tooltipText = "Registra una experiencia"
+
+
 
         // Obtén el username y el password del Intent
         val intent: Intent = intent
@@ -65,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         imageView16.setOnClickListener {
             abrirNew()
         }
+
     }
 
     // Función para cambiar a la actividad de map
